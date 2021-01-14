@@ -1,0 +1,15 @@
+dependencies {
+    compile("mysql:mysql-connector-java")
+}
+
+apply plugin: "org.flywaydb.flyway"
+
+task initFlyway() {
+    project.ext['flyway.url'] = "jdbc:mysql://localhost:3307/mobility"
+    project.ext['flyway.user'] = "root"
+    project.ext['flyway.password'] = "root"
+    project.ext['flyway.locations'] = "filesystem:${file('.').absolutePath}"
+    project.ext['flyway.encoding'] = "UTF-8"
+    project.ext['flyway.outOfOrder'] = true
+    project.ext['flyway.validateOnMigrate'] = true
+}

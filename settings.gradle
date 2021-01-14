@@ -1,0 +1,9 @@
+rootProject.name = 'fastcampus-mobility'
+include 'migration'
+include 'common'
+include 'operation'
+//include 'dispatch'
+//include 'vehicle'
+//include 'gateway'
+include 'vehicle'
+
